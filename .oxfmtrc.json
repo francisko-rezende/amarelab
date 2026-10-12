@@ -1,6 +1,10 @@
 {
   "$schema": "./node_modules/oxfmt/configuration_schema.json",
-  "ignorePatterns": ["worker-configuration.d.ts", "src/routeTree.gen.ts"],
+  "ignorePatterns": [
+    "**/worker-configuration.d.ts",
+    "**/routeTree.gen.ts",
+    "packages/data/migrations/**"
+  ],
   "semi": false,
   "singleQuote": true,
   "sortImports": {

@@ -2,7 +2,16 @@
   "name": "@amarelab/data",
   "private": true,
   "type": "module",
+  "scripts": {
+    "generate": "drizzle-kit generate"
+  },
   "exports": {
     ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.45.4"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.11"
   }
 }

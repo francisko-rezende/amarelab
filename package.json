@@ -2,5 +2,8 @@
   "name": "amarelab",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@12.4.1"
+  "packageManager": "pnpm@12.4.1",
+  "devDependencies": {
+    "typescript": "~6.0.3"
+  }
 }

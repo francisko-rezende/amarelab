@@ -1,7 +1,13 @@
-import { useQuery } from "@tanstack/react-query";
-import { honoClient } from "./api";
 
-export default function App() {
+import { useQuery } from "@tanstack/react-query";
+import { honoClient } from "../hono-client";
+import { createFileRoute } from "@tanstack/react-router";
+
+export const Route = createFileRoute('/')({
+  component: Home
+})
+
+function Home() {
   const greeting = useQuery({
     queryKey: ['greeting'],
     queryFn: async () => {

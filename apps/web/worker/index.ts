@@ -1,5 +1,10 @@
+import { createDb, getMetaValue } from "@amarelab/data";
 import { Hono } from "hono";
 
-const app = new Hono().basePath("/api").get('/hello', (c) => c.json({ message: 'hi from worker' }))
+const app = new Hono<{ Bindings: Env }>().basePath("/api").get('/greeting', async (c) => {
+  const db = createDb(c.env.DB)
+  const greeting = await getMetaValue(db, "greeting")
+  return c.json({ greeting })
+})
 
 export default app

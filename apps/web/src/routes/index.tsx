@@ -1,10 +1,10 @@
+import { useQuery } from '@tanstack/react-query'
+import { createFileRoute } from '@tanstack/react-router'
 
-import { useQuery } from "@tanstack/react-query";
-import { honoClient } from "../hono-client";
-import { createFileRoute } from "@tanstack/react-router";
+import { honoClient } from '../hono-client'
 
 export const Route = createFileRoute('/')({
-  component: Home
+  component: Home,
 })
 
 function Home() {
@@ -16,7 +16,7 @@ function Home() {
         throw new Error('Request failed')
       }
       return res.json()
-    }
+    },
   })
 
   if (greeting.isPending) return <p>Carregando...</p>

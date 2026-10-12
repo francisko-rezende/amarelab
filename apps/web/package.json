@@ -10,7 +10,8 @@
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
     "preview": "vite preview",
-    "db:migrate:local": "wrangler d1 migrations apply amarelab --local"
+    "db:migrate:local": "wrangler d1 migrations apply amarelab --local",
+    "test": "vitest run"
   },
   "dependencies": {
     "@amarelab/data": "workspace:*",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.63.1",
+    "@cloudflare/vitest-plugin": "^1.4.0",
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
@@ -41,6 +43,7 @@
     "oxlint": "^1.81.0",
     "typescript": "~6.0.2",
     "vite": "^8.3.0",
+    "vitest": "^5.0.3",
     "wrangler": "^4.149.0"
   }
 }

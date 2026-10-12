@@ -7,4 +7,5 @@ const app = new Hono<{ Bindings: Env }>().basePath("/api").get('/greeting', asyn
   return c.json({ greeting })
 })
 
+export type AppType = typeof app
 export default app

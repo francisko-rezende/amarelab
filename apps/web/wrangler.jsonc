@@ -12,6 +12,7 @@
       "binding": "DB",
       "database_name": "amarelab",
       "migrations_dir": "../../packages/data/migrations",
+      "database_id": "a5544e05-94d1-4caa-8477-6fd644a24b65",
     },
   ],
 }
